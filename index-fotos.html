@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOF STYLE - Distribuidora Nº 1 do Nordeste em Harmonização Facial e Corporal</title>
+  <meta name="description" content="HOF STYLE - Distribuidora autorizada especializada em produtos para Harmonização Facial e Corporal com envio imediato e procedência garantida." />
+
+  <meta property="og:title" content="HOF STYLE - A Distribuidora Nº 1 do Nordeste em HOF" />
+  <meta property="og:description" content="Tudo que sua clínica precisa em Harmonização Facial e Corporal em um só lugar. Distribuidora autorizada com 8 unidades no Brasil." />
+  <meta property="og:image" content="assets/img/model-kirialys.png" />
+
+  <link rel="icon" type="image/png" href="assets/img/icon-verde.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'hof-black': '#0b0b0b',
+            'hof-ink': '#141414',
+            'hof-cream': '#f6f2ec',
+            'hof-sand': '#e8e0d5',
+            'hof-emerald': '#45aa8c',
+            'hof-forest': '#025450',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { font-family: 'Inter', system-ui, sans-serif; background: #0b0b0b; }
+    body { margin: 0; overflow-x: hidden; }
+
+    /* Reveal ao rolar */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* Ken burns lento no hero */
+    @keyframes kenburns { 0% { transform: scale(1) translate3d(0,0,0); } 100% { transform: scale(1.06) translate3d(0,-1%,0); } }
+    .kenburns { animation: kenburns 26s ease-in-out infinite alternate; }
+
+    /* Marquee de marcas */
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .animate-marquee { display: flex; width: max-content; animation: marquee 34s linear infinite; }
+    .animate-marquee:hover { animation-play-state: paused; }
+
+    /* FAQ */
+    .faq-content { max-height: 0; overflow: hidden; opacity: 0; transition: max-height .35s ease, opacity .3s ease; }
+    .faq-item.active .faq-content { max-height: 340px; opacity: 1; }
+    .faq-item.active .faq-toggle { transform: rotate(45deg); color: #45aa8c; }
+
+    /* Filete decorativo */
+    .rule { width: 56px; height: 1px; background: linear-gradient(90deg, #45aa8c, rgba(69,170,140,0)); }
+
+    /* Legibilidade do hero sobre a foto */
+    .hero-title { text-shadow: 0 2px 24px rgba(0,0,0,.85), 0 1px 4px rgba(0,0,0,.7); }
+    .hero-sub { text-shadow: 0 1px 14px rgba(0,0,0,.9); }
+
+    /* Lightbox */
+    #lightbox { position: fixed; inset: 0; z-index: 90; display: none; align-items: center; justify-content: center;
+      background: rgba(7,7,7,.94); padding: 24px; backdrop-filter: blur(6px); }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-width: min(92vw, 780px); max-height: 84vh; object-fit: contain; border-radius: 4px; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0b0b0b; }
+    ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #45aa8c; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .kenburns, .animate-marquee { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-hof-black text-white antialiased selection:bg-hof-emerald selection:text-black">
+
+  <!-- ==================== NAV ==================== -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/img/logo-branca-pura.png" alt="HOF Style" class="h-9 w-auto object-contain" />
+      </a>
+      <nav class="hidden md:flex items-center gap-9 text-[13px] tracking-wide text-white/70">
+        <a href="#colecao" class="hover:text-hof-emerald transition-colors">Coleção</a>
+        <a href="#quem-somos" class="hover:text-hof-emerald transition-colors">Quem Somos</a>
+        <a href="#marcas" class="hover:text-hof-emerald transition-colors">Marcas</a>
+        <a href="#unidades" class="hover:text-hof-emerald transition-colors">Unidades</a>
+        <a href="#faq" class="hover:text-hof-emerald transition-colors">FAQ</a>
+      </nav>
+      <a href="#unidades" class="hidden sm:inline-flex items-center gap-2 border border-white/25 hover:border-hof-emerald hover:text-hof-emerald text-white text-[12px] font-semibold uppercase tracking-[0.14em] px-5 py-2.5 rounded-full transition-all">
+        Solicitar catálogo
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO EDITORIAL ==================== -->
+  <section class="relative min-h-[100svh] flex flex-col overflow-hidden">
+
+    <!-- Foto: painel direito no desktop (enquadramento aberto), fundo cheio no mobile -->
+    <div class="absolute inset-0 lg:left-[42%] overflow-hidden">
+      <img src="assets/img/model-kirialys-2.png" alt="Profissional apresentando Kirialys HACa"
+           class="kenburns w-full h-full object-cover object-[58%_20%] lg:object-[center_18%]" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/88 to-black/35 lg:from-black lg:via-black/95 lg:to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/55 lg:via-transparent lg:to-black/25"></div>
+
+    <div class="relative z-10 flex-1 flex items-end lg:items-center w-full max-w-7xl mx-auto px-5 sm:px-8 pb-14 lg:pb-16 pt-32">
+      <div class="max-w-2xl">
+
+        <div class="inline-flex items-center gap-2.5 bg-hof-emerald text-black text-[12px] font-black px-5 py-2.5 rounded-full uppercase tracking-[0.18em] mb-8 shadow-lg shadow-black/40">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+          <span>Envio Imediato</span>
+        </div>
+
+        <img src="assets/img/logo-branca-pura.png" alt="HOF Style" class="w-40 sm:w-48 mb-8 object-contain" />
+
+        <h1 class="hero-title font-display font-normal text-4xl sm:text-5xl lg:text-[3.9rem] leading-[1.06] tracking-tight text-white mb-7">
+          Tudo que sua clínica precisa em Harmonização Orofacial e Corporal,
+          <em class="not-italic text-hof-emerald font-semibold">em um só lugar.</em>
+        </h1>
+
+        <p class="hero-sub text-white/90 text-base sm:text-lg leading-relaxed max-w-xl mb-10">
+          Com entrega rápida e procedência garantida. 6 anos de mercado construídos com produtos de qualidade e parceria de verdade com nossos clientes.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="#unidades" class="inline-flex items-center justify-center gap-3 bg-hof-emerald hover:bg-[#3d987d] text-black font-bold text-sm px-8 py-4 rounded-full uppercase tracking-[0.12em] transition-all hover:scale-[1.03] active:scale-95">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+            </svg>
+            <span>Solicite o Catálogo</span>
+          </a>
+          <a href="#colecao" class="inline-flex items-center justify-center gap-2 border border-white/25 text-white/85 hover:border-hof-emerald hover:text-hof-emerald font-semibold text-sm px-8 py-4 rounded-full uppercase tracking-[0.12em] transition-all">
+            <span>Ver a coleção</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Barra inferior de números -->
+    <div class="relative z-10 mt-auto w-full border-t-2 border-hof-emerald/70 bg-black/85 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/15">
+        <div class="py-6 sm:py-7 px-4 first:pl-0 flex flex-col items-center md:items-start text-center md:text-left">
+          <p class="font-sans font-black text-4xl sm:text-5xl text-hof-emerald leading-none tracking-tight">6</p>
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] text-white mt-2">Anos de mercado</p>
+        </div>
+        <div class="py-6 sm:py-7 px-4 flex flex-col items-center md:items-start text-center md:text-left">
+          <p class="font-sans font-black text-4xl sm:text-5xl text-hof-emerald leading-none tracking-tight">8</p>
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] text-white mt-2">Unidades</p>
+        </div>
+        <div class="py-6 sm:py-7 px-4 flex flex-col items-center md:items-start text-center md:text-left">
+          <p class="font-sans font-black text-4xl sm:text-5xl text-hof-emerald leading-none tracking-tight">4</p>
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] text-white mt-2">Estados atendidos</p>
+        </div>
+        <div class="py-6 sm:py-7 px-4 flex flex-col items-center md:items-start text-center md:text-left">
+          <p class="font-sans font-black text-4xl sm:text-5xl text-hof-emerald leading-none tracking-tight">1h</p>
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] text-white mt-2">Entrega nas capitais</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==================== 4 PILARES ==================== -->
+  <section id="diferenciais" class="bg-hof-black py-20 sm:py-24 px-5 sm:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
+      <div class="reveal bg-zinc-900/70 border border-white/10 rounded-sm p-7 hover:border-hof-emerald/50 transition-colors">
+        <div class="w-12 h-12 rounded-full bg-hof-emerald/15 border border-hof-emerald/40 flex items-center justify-center text-hof-emerald mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3 class="font-sans font-bold text-xl text-white mb-2 tracking-tight">Grupo VIP</h3>
+        <div class="rule mb-4"></div>
+        <p class="text-sm text-white/80 leading-relaxed">Acesso a promoções exclusivas, lançamentos em primeira mão e condições especiais só para quem faz parte do grupo.</p>
+      </div>
+
+      <div class="reveal bg-zinc-900/70 border border-white/10 rounded-sm p-7 hover:border-hof-emerald/50 transition-colors">
+        <div class="w-12 h-12 rounded-full bg-hof-emerald/15 border border-hof-emerald/40 flex items-center justify-center text-hof-emerald mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+        </div>
+        <h3 class="font-sans font-bold text-xl text-white mb-2 tracking-tight">Frete Grátis</h3>
+        <div class="rule mb-4"></div>
+        <p class="text-sm text-white/80 leading-relaxed">Para regiões selecionadas. Confira com nossa equipe de vendas se sua região está contemplada.</p>
+      </div>
+
+      <div class="reveal bg-zinc-900/70 border border-white/10 rounded-sm p-7 hover:border-hof-emerald/50 transition-colors">
+        <div class="w-12 h-12 rounded-full bg-hof-emerald/15 border border-hof-emerald/40 flex items-center justify-center text-hof-emerald mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+          </svg>
+        </div>
+        <h3 class="font-sans font-bold text-xl text-white mb-2 tracking-tight">Melhores Produtos do Mercado</h3>
+        <div class="rule mb-4"></div>
+        <p class="text-sm text-white/80 leading-relaxed">Marcas premium e produtos de alta performance, selecionados para garantir o melhor resultado nos seus procedimentos.</p>
+      </div>
+
+      <div class="reveal bg-zinc-900/70 border border-white/10 rounded-sm p-7 hover:border-hof-emerald/50 transition-colors">
+        <div class="w-12 h-12 rounded-full bg-hof-emerald/15 border border-hof-emerald/40 flex items-center justify-center text-hof-emerald mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line>
+          </svg>
+        </div>
+        <h3 class="font-sans font-bold text-xl text-white mb-2 tracking-tight">Parcelamento em até 10x</h3>
+        <div class="rule mb-4"></div>
+        <p class="text-sm text-white/80 leading-relaxed">Flexibilidade para sua clínica investir sem pesar no caixa. Parcele suas compras em até 10 vezes.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== QUEM SOMOS (split com foto da clínica) ==================== -->
+  <section id="quem-somos" class="bg-hof-cream text-hof-ink">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+
+      <div class="relative min-h-[420px] lg:min-h-[740px] overflow-hidden">
+        <img src="assets/img/restylane-clinica.png" alt="Restylane em bancada de clínica"
+             class="absolute inset-0 w-full h-full object-cover" />
+      </div>
+
+      <div class="flex items-center px-6 sm:px-12 lg:px-16 py-20 lg:py-28">
+        <div class="max-w-xl reveal">
+          <p class="text-[11px] uppercase tracking-[0.24em] text-hof-forest font-bold mb-5">Quem somos</p>
+          <h2 class="font-display font-light text-4xl sm:text-5xl leading-[1.08] mb-6">
+            A distribuidora nº 1 <em class="not-italic text-hof-forest">do Nordeste</em>
+          </h2>
+          <div class="rule mb-8"></div>
+          <div class="space-y-5 text-[15px] sm:text-base leading-relaxed text-hof-ink/75">
+            <p>
+              Há 6 anos no mercado, a <strong class="text-hof-ink font-semibold">HOF STYLE</strong> é referência na distribuição de produtos para Harmonização Facial e Corporal. Nossa missão é abastecer sua clínica com rapidez, procedência garantida e uma parceria de verdade no seu dia a dia.
+            </p>
+            <p>
+              Com unidades físicas e polos estratégicos na Paraíba, Rio Grande do Norte, Maranhão e Ceará, entendemos a urgência da sua rotina clínica: mantemos estoque a pronta entrega com as maiores e melhores marcas certificadas pela ANVISA para que seu atendimento nunca pare.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-x-8 gap-y-6 mt-12 pt-10 border-t border-hof-ink/10">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.18em] text-hof-ink/45 font-semibold mb-1">Distribuidora</p>
+              <p class="text-sm font-semibold">Distribuidora Autorizada</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.18em] text-hof-ink/45 font-semibold mb-1">ANVISA</p>
+              <p class="text-sm font-semibold">Produtos 100% Certificados</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.18em] text-hof-ink/45 font-semibold mb-1">Lei nº 6.360/1976</p>
+              <p class="text-sm font-semibold">Exclusivo para Profissionais</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.18em] text-hof-ink/45 font-semibold mb-1">Garantia &amp; Suporte</p>
+              <p class="text-sm font-semibold">NF-e e Suporte Pós-Venda</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== COLEÇÃO / PRODUTOS EM FOTO ==================== -->
+  <section id="colecao" class="bg-hof-black py-24 sm:py-28 px-5 sm:px-8">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="max-w-2xl mb-16 reveal">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-hof-emerald font-bold mb-5">Vitrine em destaque</p>
+        <h2 class="font-display font-light text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.06] text-white mb-6">
+          Os produtos <em class="not-italic text-hof-emerald">mais pedidos</em>
+        </h2>
+        <div class="rule mb-7"></div>
+        <p class="text-white/55 text-base leading-relaxed">
+          Qualidade inegociável, rigor térmico absoluto e pronta-entrega imediata para os protocolos mais requisitados em harmonização facial e corporal.
+        </p>
+      </div>
+
+      <!-- Produto 1 - Rennova Elleva X -->
+      <article class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center mb-20 lg:mb-28 reveal">
+        <div class="lg:col-span-7 relative group overflow-hidden rounded-sm bg-zinc-950">
+          <img src="assets/img/ellevax-escuro.png" alt="Rennova Elleva X, pó injetável de ácido poli-L-lático"
+               class="w-full h-[440px] sm:h-[560px] object-cover object-center transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute top-5 left-5 bg-hof-emerald text-black text-[10px] font-black uppercase tracking-[0.16em] px-3 py-1.5 rounded-full">Mais pedido</span>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="text-[11px] uppercase tracking-[0.22em] text-hof-emerald font-bold mb-4">Bioestimulador</p>
+          <h3 class="font-display text-4xl sm:text-[2.7rem] leading-tight text-white mb-3">Rennova Elleva X</h3>
+          <p class="text-xs font-semibold text-white/45 tracking-wide mb-6">PLLA 630mg &bull; Pó Injetável</p>
+          <p class="text-[15px] text-white/60 leading-relaxed mb-9">
+            Potência máxima em neocolagênese facial e corporal com rápida reconstituição e padrão ouro Rennova.
+          </p>
+          <a href="#unidades"
+             class="inline-flex items-center gap-3 border border-hof-emerald text-hof-emerald hover:bg-hof-emerald hover:text-black font-bold text-xs uppercase tracking-[0.14em] px-7 py-4 rounded-full transition-all">
+            <span>Escolher unidade</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Produto 2 - Biogelis Volume -->
+      <article class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center mb-20 lg:mb-28 reveal">
+        <div class="lg:col-span-5 lg:order-2 relative group overflow-hidden rounded-sm bg-zinc-950">
+          <img src="assets/img/model-biogelis.png" alt="Biogelis Volume apresentado por profissional"
+               class="w-full h-[440px] sm:h-[560px] object-cover object-top transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute top-5 left-5 bg-hof-emerald text-black text-[10px] font-black uppercase tracking-[0.16em] px-3 py-1.5 rounded-full">Alta performance</span>
+        </div>
+        <div class="lg:col-span-7 lg:order-1 lg:pr-10">
+          <p class="text-[11px] uppercase tracking-[0.22em] text-hof-emerald font-bold mb-4">Preenchedor Dérmico</p>
+          <h3 class="font-display text-4xl sm:text-[2.7rem] leading-tight text-white mb-3">Biogelis Volume</h3>
+          <p class="text-xs font-semibold text-white/45 tracking-wide mb-6">Ácido Hialurônico &bull; 2 × 1ml c/ Lido</p>
+          <p class="text-[15px] text-white/60 leading-relaxed mb-9">
+            Alta viscoelasticidade para volumização malar, mandíbula e mento com conforto anestésico ao paciente.
+          </p>
+          <a href="#unidades"
+             class="inline-flex items-center gap-3 border border-hof-emerald text-hof-emerald hover:bg-hof-emerald hover:text-black font-bold text-xs uppercase tracking-[0.14em] px-7 py-4 rounded-full transition-all">
+            <span>Escolher unidade</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Produtos 3 e 4 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
+
+        <article class="reveal">
+          <div class="relative group overflow-hidden rounded-sm bg-zinc-950 mb-7">
+            <img src="assets/img/model-kirialys.png" alt="Kirialys HACa apresentado por profissional"
+                 class="w-full aspect-[3/4] object-contain transition-transform duration-[1200ms] group-hover:scale-[1.03]" />
+            <span class="absolute top-5 left-5 bg-hof-emerald text-black text-[10px] font-black uppercase tracking-[0.16em] px-3 py-1.5 rounded-full">Linha premium</span>
+          </div>
+          <p class="text-[11px] uppercase tracking-[0.22em] text-hof-emerald font-bold mb-3">Bioestimulador &amp; Preenchimento</p>
+          <h3 class="font-display text-3xl text-white mb-2">Kirialys HACa</h3>
+          <p class="text-xs font-semibold text-white/45 tracking-wide mb-5">Hidroxiapatita de Cálcio &bull; 1,25ml</p>
+          <p class="text-[15px] text-white/60 leading-relaxed mb-7">
+            Dupla ação com efeito lifting estrutural imediato e estímulo biológico contínuo de colágeno autólogo.
+          </p>
+          <a href="#unidades"
+             class="inline-flex items-center gap-3 border border-white/20 text-white hover:border-hof-emerald hover:text-hof-emerald font-bold text-xs uppercase tracking-[0.14em] px-7 py-3.5 rounded-full transition-all">
+            <span>Escolher unidade</span>
+          </a>
+        </article>
+
+        <article class="reveal">
+          <div class="relative group overflow-hidden rounded-sm bg-zinc-950 mb-7">
+            <img src="assets/img/model-evofill.png" alt="Evofill Contour S e H apresentados por profissional"
+                 class="w-full aspect-[3/4] object-contain transition-transform duration-[1200ms] group-hover:scale-[1.03]" />
+            <span class="absolute top-5 left-5 bg-hof-emerald text-black text-[10px] font-black uppercase tracking-[0.16em] px-3 py-1.5 rounded-full">Volume &amp; contorno</span>
+          </div>
+          <p class="text-[11px] uppercase tracking-[0.22em] text-hof-emerald font-bold mb-3">Preenchedor Corporal &amp; Facial</p>
+          <h3 class="font-display text-3xl text-white mb-2">Evofill Contour S &amp; H</h3>
+          <p class="text-xs font-semibold text-white/45 tracking-wide mb-5">Ácido Hialurônico &bull; 10ml</p>
+          <p class="text-[15px] text-white/60 leading-relaxed mb-7">
+            Desenvolvido para projeção mandibular e procedimentos corporais com retenção e biocompatibilidade estrita.
+          </p>
+          <a href="#unidades"
+             class="inline-flex items-center gap-3 border border-white/20 text-white hover:border-hof-emerald hover:text-hof-emerald font-bold text-xs uppercase tracking-[0.14em] px-7 py-3.5 rounded-full transition-all">
+            <span>Escolher unidade</span>
+          </a>
+        </article>
+
+      </div>
+
+      <!-- Banner de apoio -->
+      <div class="mt-20 border border-white/10 rounded-sm p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-7 reveal">
+        <div>
+          <h4 class="font-display text-2xl text-white mb-2">Precisa de outra marca, toxina ou dosagem específica?</h4>
+          <p class="text-sm text-white/55 leading-relaxed max-w-2xl">Trabalhamos também com Botox®, Dysport®, Xeomin®, Rennova Lift, fios de sustentação e cânulas hospitalares.</p>
+        </div>
+        <a href="#unidades" class="whitespace-nowrap inline-flex items-center gap-2 bg-hof-emerald hover:bg-[#3d987d] text-black font-bold text-xs uppercase tracking-[0.14em] py-4 px-7 rounded-full transition-all">
+          <span>Ver tabela completa</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== GALERIA / LOOKBOOK ==================== -->
+  <section id="galeria" class="bg-hof-ink py-24 sm:py-28 px-5 sm:px-8 border-t border-white/10">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14 reveal">
+        <div class="max-w-xl">
+          <p class="text-[11px] uppercase tracking-[0.24em] text-hof-emerald font-bold mb-5">Lookbook</p>
+          <h2 class="font-display font-light text-4xl sm:text-5xl leading-[1.08] text-white">
+            O portfólio que <em class="not-italic text-hof-emerald">sai da nossa prateleira</em>
+          </h2>
+        </div>
+        <p class="text-xs text-white/40 uppercase tracking-[0.16em]">Clique para ampliar</p>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+
+        <button class="lb group relative col-span-2 lg:row-span-2 overflow-hidden rounded-sm bg-black" data-src="assets/img/restylane-lyft.png" data-caption="Restylane Lyft — Galderma · gel injetável 1 mL">
+          <img src="assets/img/restylane-lyft.png" alt="Restylane Lyft" class="w-full h-full min-h-[300px] lg:min-h-[568px] object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute inset-x-0 bottom-0 p-5 text-left bg-gradient-to-t from-black/85 to-transparent">
+            <span class="block text-white font-semibold text-sm">Restylane Lyft</span>
+            <span class="block text-white/55 text-xs mt-0.5">Galderma · 1 mL</span>
+          </span>
+        </button>
+
+        <button class="lb group relative overflow-hidden rounded-sm bg-black" data-src="assets/img/ellevax-claro.png" data-caption="Rennova Elleva X — PLLA 630 mg">
+          <img src="assets/img/ellevax-claro.png" alt="Rennova Elleva X" class="w-full h-full min-h-[200px] lg:min-h-[276px] object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-black/85 to-transparent">
+            <span class="block text-white font-semibold text-xs">Rennova Elleva X</span>
+          </span>
+        </button>
+
+        <button class="lb group relative overflow-hidden rounded-sm bg-black" data-src="assets/img/evofill-podium.png" data-caption="Evofill Contour S &amp; H — 10 mL">
+          <img src="assets/img/evofill-podium.png" alt="Evofill Contour S e H" class="w-full h-full min-h-[200px] lg:min-h-[276px] object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-black/85 to-transparent">
+            <span class="block text-white font-semibold text-xs">Evofill Contour</span>
+          </span>
+        </button>
+
+        <button class="lb group relative overflow-hidden rounded-sm bg-black" data-src="assets/img/kirialys-caixa.png" data-caption="Kirialys HACa — hidroxiapatita de cálcio 1,25 mL">
+          <img src="assets/img/kirialys-caixa.png" alt="Kirialys HACa" class="w-full h-full min-h-[200px] lg:min-h-[276px] object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-black/85 to-transparent">
+            <span class="block text-white font-semibold text-xs">Kirialys HACa</span>
+          </span>
+        </button>
+
+        <button class="lb group relative overflow-hidden rounded-sm bg-black" data-src="assets/img/biogelis-volume.png" data-caption="Biogelis Volume — 2 × 1 mL com lidocaína">
+          <img src="assets/img/biogelis-volume.png" alt="Biogelis Volume" class="w-full h-full min-h-[200px] lg:min-h-[276px] object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-black/85 to-transparent">
+            <span class="block text-white font-semibold text-xs">Biogelis Volume</span>
+          </span>
+        </button>
+
+        <button class="lb group relative overflow-hidden rounded-sm bg-black" data-src="assets/img/restylane-kysse.png" data-caption="Restylane Kysse — Galderma">
+          <img src="assets/img/restylane-kysse.png" alt="Restylane Kysse" class="w-full h-full min-h-[200px] lg:min-h-[276px] object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-black/85 to-transparent">
+            <span class="block text-white font-semibold text-xs">Restylane Kysse</span>
+          </span>
+        </button>
+
+        <button class="lb group relative overflow-hidden rounded-sm bg-black" data-src="assets/img/rennova-lift.png" data-caption="Rennova Lift — linha de sustentação">
+          <img src="assets/img/rennova-lift.png" alt="Rennova Lift" class="w-full h-full min-h-[200px] lg:min-h-[276px] object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-black/85 to-transparent">
+            <span class="block text-white font-semibold text-xs">Rennova Lift</span>
+          </span>
+        </button>
+
+        <button class="lb group relative overflow-hidden rounded-sm bg-black" data-src="assets/img/restylane-skinboosters.png" data-caption="Restylane Skinboosters — hidratação dérmica">
+          <img src="assets/img/restylane-skinboosters.png" alt="Restylane Skinboosters" class="w-full h-full min-h-[200px] lg:min-h-[276px] object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-black/85 to-transparent">
+            <span class="block text-white font-semibold text-xs">Restylane Skinboosters</span>
+          </span>
+        </button>
+
+        <button class="lb group relative overflow-hidden rounded-sm bg-black" data-src="assets/img/belotero-volume.png" data-caption="Belotero Volume — preenchedor de ácido hialurônico">
+          <img src="assets/img/belotero-volume.png" alt="Belotero Volume" class="w-full h-full min-h-[200px] lg:min-h-[276px] object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+          <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-black/85 to-transparent">
+            <span class="block text-white font-semibold text-xs">Belotero Volume</span>
+          </span>
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAIXA FOTOGRÁFICA + CHAMADA ==================== -->
+  <section class="relative py-28 sm:py-36 px-5 sm:px-8 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="assets/img/hero-bg.jpg" alt="" class="w-full h-full object-cover object-top opacity-25" />
+    </div>
+    <div class="absolute inset-0 bg-hof-black/80"></div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
+      <img src="assets/img/icon-verde.png" alt="" class="h-14 w-auto mx-auto mb-8 object-contain" />
+      <h2 class="font-display font-light text-3xl sm:text-4xl lg:text-5xl leading-[1.12] text-white mb-6">
+        Harmonia e profissionalismo em cada entrega
+      </h2>
+      <p class="text-white/60 text-base leading-relaxed max-w-xl mx-auto mb-10">
+        Estoque a pronta entrega, controle térmico rigoroso e Nota Fiscal Eletrônica com lote e validade em toda saída.
+      </p>
+      <a href="#unidades" class="inline-flex items-center gap-3 bg-hof-emerald hover:bg-[#3d987d] text-black font-bold text-sm px-9 py-4 rounded-full uppercase tracking-[0.12em] transition-all hover:scale-[1.03] active:scale-95">
+        <span>Falar com uma unidade</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== MARCAS ==================== -->
+  <section id="marcas" class="bg-hof-black py-20 border-y border-white/10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 mb-12 text-center">
+      <h2 class="font-display font-light text-3xl sm:text-4xl text-white">
+        Marcas e produtos que <em class="not-italic text-hof-emerald">trabalhamos</em>
+      </h2>
+    </div>
+
+    <div class="relative">
+      <div class="absolute top-0 left-0 w-20 md:w-40 h-full bg-gradient-to-r from-hof-black to-transparent z-20 pointer-events-none"></div>
+      <div class="absolute top-0 right-0 w-20 md:w-40 h-full bg-gradient-to-l from-hof-black to-transparent z-20 pointer-events-none"></div>
+      <div class="flex overflow-hidden">
+        <div class="animate-marquee shrink-0 items-center whitespace-nowrap">
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Rennova</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Dysport</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Botox</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Elleva X</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Xeomin</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Nabota</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Evofill</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Biogelis</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Kirialys</div>
+
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Rennova</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Dysport</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Botox</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Elleva X</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Xeomin</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Nabota</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Evofill</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Biogelis</div>
+          <div class="font-display text-3xl md:text-5xl font-light text-white/30 hover:text-white transition-colors px-8">Kirialys</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12 text-hof-emerald font-semibold tracking-[0.2em] text-[10px] sm:text-xs uppercase px-4">
+      Toxinas Botulínicas&nbsp;•&nbsp;Preenchedores&nbsp;•&nbsp;Bioestimuladores&nbsp;•&nbsp;Fios de PDO&nbsp;•&nbsp;Cânulas &amp; Insumos&nbsp;•&nbsp;Anestésicos
+    </div>
+  </section>
+
+  <!-- ==================== UNIDADES ==================== -->
+  <section id="unidades" class="bg-hof-cream text-hof-ink py-24 sm:py-28 px-5 sm:px-8">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="max-w-2xl mb-14 reveal">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-hof-forest font-bold mb-5">Onde estamos</p>
+        <h2 class="font-display font-light text-4xl sm:text-5xl leading-[1.08] mb-5">
+          Nossas <em class="not-italic text-hof-forest">unidades</em>
+        </h2>
+        <div class="rule mb-6"></div>
+        <p class="text-hof-ink/60 text-base">Selecione a unidade mais próxima e fale direto no WhatsApp.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <a href="https://wa.me/5584991650603?text=Ol%C3%A1%2C%20vim%20do%20site%20HOF%20Style" target="_blank" rel="noreferrer" class="group bg-white border border-hof-ink/10 border-l-4 border-l-hof-emerald rounded-sm p-7 flex flex-col justify-between gap-8 shadow-[0_1px_3px_rgba(20,20,20,.07)] hover:shadow-[0_14px_34px_rgba(2,84,80,.16)] hover:border-l-hof-forest hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-hof-forest font-black">Unidade</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24" class="text-hof-emerald group-hover:text-hof-forest group-hover:scale-110 transition-all">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.78 2.796.78 3.185 0 5.77-2.586 5.77-5.766 0-3.18-2.585-5.766-5.77-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.815-1.238l-5.185 1.3 1.341-4.999c-.878-1.503-1.341-3.238-1.341-5.063 0-5.518 4.482-10 10-10s10 4.482 10 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-sans font-bold text-xl tracking-tight mb-1.5 group-hover:text-hof-forest transition-colors">Natal <span class="text-hof-ink/40 text-base">(RN)</span></h3>
+            <p class="text-[15px] font-semibold text-hof-ink/80">(84) 99165-0603</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-hof-forest flex items-center gap-2 group-hover:gap-3 transition-all">Falar no WhatsApp <span>&rarr;</span></p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/5583981948914?text=Ol%C3%A1%2C%20vim%20do%20site%20HOF%20Style" target="_blank" rel="noreferrer" class="group bg-white border border-hof-ink/10 border-l-4 border-l-hof-emerald rounded-sm p-7 flex flex-col justify-between gap-8 shadow-[0_1px_3px_rgba(20,20,20,.07)] hover:shadow-[0_14px_34px_rgba(2,84,80,.16)] hover:border-l-hof-forest hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-hof-forest font-black">Unidade</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24" class="text-hof-emerald group-hover:text-hof-forest group-hover:scale-110 transition-all">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.78 2.796.78 3.185 0 5.77-2.586 5.77-5.766 0-3.18-2.585-5.766-5.77-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.815-1.238l-5.185 1.3 1.341-4.999c-.878-1.503-1.341-3.238-1.341-5.063 0-5.518 4.482-10 10-10s10 4.482 10 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-sans font-bold text-xl tracking-tight mb-1.5 group-hover:text-hof-forest transition-colors">João Pessoa <span class="text-hof-ink/40 text-base">(PB)</span></h3>
+            <p class="text-[15px] font-semibold text-hof-ink/80">(83) 98194-8914</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-hof-forest flex items-center gap-2 group-hover:gap-3 transition-all">Falar no WhatsApp <span>&rarr;</span></p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/5583998102051?text=Ol%C3%A1%2C%20vim%20do%20site%20HOF%20Style" target="_blank" rel="noreferrer" class="group bg-white border border-hof-ink/10 border-l-4 border-l-hof-emerald rounded-sm p-7 flex flex-col justify-between gap-8 shadow-[0_1px_3px_rgba(20,20,20,.07)] hover:shadow-[0_14px_34px_rgba(2,84,80,.16)] hover:border-l-hof-forest hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-hof-forest font-black">Unidade</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24" class="text-hof-emerald group-hover:text-hof-forest group-hover:scale-110 transition-all">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.78 2.796.78 3.185 0 5.77-2.586 5.77-5.766 0-3.18-2.585-5.766-5.77-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.815-1.238l-5.185 1.3 1.341-4.999c-.878-1.503-1.341-3.238-1.341-5.063 0-5.518 4.482-10 10-10s10 4.482 10 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-sans font-bold text-xl tracking-tight mb-1.5 group-hover:text-hof-forest transition-colors">Campina Grande <span class="text-hof-ink/40 text-base">(PB)</span></h3>
+            <p class="text-[15px] font-semibold text-hof-ink/80">(83) 99810-2051</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-hof-forest flex items-center gap-2 group-hover:gap-3 transition-all">Falar no WhatsApp <span>&rarr;</span></p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/5583998070773?text=Ol%C3%A1%2C%20vim%20do%20site%20HOF%20Style" target="_blank" rel="noreferrer" class="group bg-white border border-hof-ink/10 border-l-4 border-l-hof-emerald rounded-sm p-7 flex flex-col justify-between gap-8 shadow-[0_1px_3px_rgba(20,20,20,.07)] hover:shadow-[0_14px_34px_rgba(2,84,80,.16)] hover:border-l-hof-forest hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-hof-forest font-black">Unidade</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24" class="text-hof-emerald group-hover:text-hof-forest group-hover:scale-110 transition-all">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.78 2.796.78 3.185 0 5.77-2.586 5.77-5.766 0-3.18-2.585-5.766-5.77-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.815-1.238l-5.185 1.3 1.341-4.999c-.878-1.503-1.341-3.238-1.341-5.063 0-5.518 4.482-10 10-10s10 4.482 10 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-sans font-bold text-xl tracking-tight mb-1.5 group-hover:text-hof-forest transition-colors">Patos <span class="text-hof-ink/40 text-base">(PB)</span></h3>
+            <p class="text-[15px] font-semibold text-hof-ink/80">(83) 99807-0773</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-hof-forest flex items-center gap-2 group-hover:gap-3 transition-all">Falar no WhatsApp <span>&rarr;</span></p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/5583991190648?text=Ol%C3%A1%2C%20vim%20do%20site%20HOF%20Style" target="_blank" rel="noreferrer" class="group bg-white border border-hof-ink/10 border-l-4 border-l-hof-emerald rounded-sm p-7 flex flex-col justify-between gap-8 shadow-[0_1px_3px_rgba(20,20,20,.07)] hover:shadow-[0_14px_34px_rgba(2,84,80,.16)] hover:border-l-hof-forest hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-hof-forest font-black">Unidade</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24" class="text-hof-emerald group-hover:text-hof-forest group-hover:scale-110 transition-all">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.78 2.796.78 3.185 0 5.77-2.586 5.77-5.766 0-3.18-2.585-5.766-5.77-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.815-1.238l-5.185 1.3 1.341-4.999c-.878-1.503-1.341-3.238-1.341-5.063 0-5.518 4.482-10 10-10s10 4.482 10 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-sans font-bold text-xl tracking-tight mb-1.5 group-hover:text-hof-forest transition-colors">Cajazeiras <span class="text-hof-ink/40 text-base">(PB)</span></h3>
+            <p class="text-[15px] font-semibold text-hof-ink/80">(83) 99119-0648</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-hof-forest flex items-center gap-2 group-hover:gap-3 transition-all">Falar no WhatsApp <span>&rarr;</span></p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/5583991190648?text=Ol%C3%A1%2C%20vim%20do%20site%20HOF%20Style" target="_blank" rel="noreferrer" class="group bg-white border border-hof-ink/10 border-l-4 border-l-hof-emerald rounded-sm p-7 flex flex-col justify-between gap-8 shadow-[0_1px_3px_rgba(20,20,20,.07)] hover:shadow-[0_14px_34px_rgba(2,84,80,.16)] hover:border-l-hof-forest hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-hof-forest font-black">Unidade</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24" class="text-hof-emerald group-hover:text-hof-forest group-hover:scale-110 transition-all">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.78 2.796.78 3.185 0 5.77-2.586 5.77-5.766 0-3.18-2.585-5.766-5.77-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.815-1.238l-5.185 1.3 1.341-4.999c-.878-1.503-1.341-3.238-1.341-5.063 0-5.518 4.482-10 10-10s10 4.482 10 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-sans font-bold text-xl tracking-tight mb-1.5 group-hover:text-hof-forest transition-colors">Sousa <span class="text-hof-ink/40 text-base">(PB)</span></h3>
+            <p class="text-[15px] font-semibold text-hof-ink/80">(83) 99119-0648</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-hof-forest flex items-center gap-2 group-hover:gap-3 transition-all">Falar no WhatsApp <span>&rarr;</span></p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/5599984124975?text=Ol%C3%A1%2C%20vim%20do%20site%20HOF%20Style" target="_blank" rel="noreferrer" class="group bg-white border border-hof-ink/10 border-l-4 border-l-hof-emerald rounded-sm p-7 flex flex-col justify-between gap-8 shadow-[0_1px_3px_rgba(20,20,20,.07)] hover:shadow-[0_14px_34px_rgba(2,84,80,.16)] hover:border-l-hof-forest hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-hof-forest font-black">Unidade</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24" class="text-hof-emerald group-hover:text-hof-forest group-hover:scale-110 transition-all">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.78 2.796.78 3.185 0 5.77-2.586 5.77-5.766 0-3.18-2.585-5.766-5.77-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.815-1.238l-5.185 1.3 1.341-4.999c-.878-1.503-1.341-3.238-1.341-5.063 0-5.518 4.482-10 10-10s10 4.482 10 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-sans font-bold text-xl tracking-tight mb-1.5 group-hover:text-hof-forest transition-colors">Imperatriz <span class="text-hof-ink/40 text-base">(MA)</span></h3>
+            <p class="text-[15px] font-semibold text-hof-ink/80">(99) 98412-4975</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-hof-forest flex items-center gap-2 group-hover:gap-3 transition-all">Falar no WhatsApp <span>&rarr;</span></p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/5588988565860?text=Ol%C3%A1%2C%20vim%20do%20site%20HOF%20Style" target="_blank" rel="noreferrer" class="group bg-white border border-hof-ink/10 border-l-4 border-l-hof-emerald rounded-sm p-7 flex flex-col justify-between gap-8 shadow-[0_1px_3px_rgba(20,20,20,.07)] hover:shadow-[0_14px_34px_rgba(2,84,80,.16)] hover:border-l-hof-forest hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-start justify-between">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-hof-forest font-black">Unidade</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24" class="text-hof-emerald group-hover:text-hof-forest group-hover:scale-110 transition-all">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.78 2.796.78 3.185 0 5.77-2.586 5.77-5.766 0-3.18-2.585-5.766-5.77-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.815-1.238l-5.185 1.3 1.341-4.999c-.878-1.503-1.341-3.238-1.341-5.063 0-5.518 4.482-10 10-10s10 4.482 10 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-sans font-bold text-xl tracking-tight mb-1.5 group-hover:text-hof-forest transition-colors">Sobral / Tianguá <span class="text-hof-ink/40 text-base">(CE)</span></h3>
+            <p class="text-[15px] font-semibold text-hof-ink/80">(88) 98856-5860</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-hof-forest flex items-center gap-2 group-hover:gap-3 transition-all">Falar no WhatsApp <span>&rarr;</span></p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq" class="bg-hof-black py-24 sm:py-28 px-5 sm:px-8">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+
+      <div class="lg:col-span-4 reveal">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-hof-emerald font-bold mb-5">Dúvidas</p>
+        <h2 class="font-display font-light text-4xl sm:text-5xl leading-[1.08] text-white mb-6">
+          Perguntas <em class="not-italic text-hof-emerald">frequentes</em>
+        </h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="lg:col-span-8">
+
+        <div class="faq-item border-b border-white/10">
+          <button class="faq-btn w-full py-6 text-left flex items-start justify-between gap-6 text-white font-medium text-base sm:text-lg hover:text-hof-emerald transition-colors focus:outline-none">
+            <span>Como funciona a entrega rápida (em até 1 hora)?</span>
+            <span class="faq-toggle text-2xl font-light text-white/40 transition-transform duration-300 shrink-0">+</span>
+          </button>
+          <div class="faq-content text-white/55 text-[15px] leading-relaxed pb-6 pr-10">
+            Nas cidades onde possuímos unidades físicas e motoboys parceiros (João Pessoa, Campina Grande, Patos, Sousa, Cajazeiras, Natal, Imperatriz e Sobral/Tianguá), os pedidos confirmados contam com envio imediato e recebimento em até 1 hora diretamente no seu consultório ou clínica.
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-white/10">
+          <button class="faq-btn w-full py-6 text-left flex items-start justify-between gap-6 text-white font-medium text-base sm:text-lg hover:text-hof-emerald transition-colors focus:outline-none">
+            <span>O que é o Grupo VIP e como participar?</span>
+            <span class="faq-toggle text-2xl font-light text-white/40 transition-transform duration-300 shrink-0">+</span>
+          </button>
+          <div class="faq-content text-white/55 text-[15px] leading-relaxed pb-6 pr-10">
+            O Grupo VIP da Hof Style reúne profissionais habilitados que recebem em primeira mão novidades, lançamentos do mercado, campanhas sazonais e condições comerciais exclusivas que não são divulgadas abertamente. Solicite sua entrada diretamente no WhatsApp da sua filial.
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-white/10">
+          <button class="faq-btn w-full py-6 text-left flex items-start justify-between gap-6 text-white font-medium text-base sm:text-lg hover:text-hof-emerald transition-colors focus:outline-none">
+            <span>Como funciona o Frete Grátis?</span>
+            <span class="faq-toggle text-2xl font-light text-white/40 transition-transform duration-300 shrink-0">+</span>
+          </button>
+          <div class="faq-content text-white/55 text-[15px] leading-relaxed pb-6 pr-10">
+            Disponibilizamos frete grátis para regiões e rotas selecionadas atendidas por nossas filiais e parceiros logísticos. Para conferir se sua localidade e volume de compra estão contemplados, fale diretamente com nossa equipe de vendas.
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-white/10">
+          <button class="faq-btn w-full py-6 text-left flex items-start justify-between gap-6 text-white font-medium text-base sm:text-lg hover:text-hof-emerald transition-colors focus:outline-none">
+            <span>Posso parcelar minhas compras em até 10x?</span>
+            <span class="faq-toggle text-2xl font-light text-white/40 transition-transform duration-300 shrink-0">+</span>
+          </button>
+          <div class="faq-content text-white/55 text-[15px] leading-relaxed pb-6 pr-10">
+            Sim! Facilitamos o fluxo financeiro da sua clínica com opções de parcelamento em até 10 vezes no cartão de crédito, além de condições personalizadas via Pix para pedidos programados.
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-white/10">
+          <button class="faq-btn w-full py-6 text-left flex items-start justify-between gap-6 text-white font-medium text-base sm:text-lg hover:text-hof-emerald transition-colors focus:outline-none">
+            <span>A venda é aberta ao público em geral?</span>
+            <span class="faq-toggle text-2xl font-light text-white/40 transition-transform duration-300 shrink-0">+</span>
+          </button>
+          <div class="faq-content text-white/55 text-[15px] leading-relaxed pb-6 pr-10">
+            Não. Em conformidade com a Lei Federal nº 6.360/1976 e resoluções sanitárias da ANVISA, comercializamos exclusivamente para profissionais habilitados em harmonização facial e corporal (Médicos, Cirurgiões-Dentistas, Biomédicos, Farmacêuticos e Enfermeiros Estetas), com cadastro e comprovação profissional ativa.
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-white/10">
+          <button class="faq-btn w-full py-6 text-left flex items-start justify-between gap-6 text-white font-medium text-base sm:text-lg hover:text-hof-emerald transition-colors focus:outline-none">
+            <span>Os produtos possuem garantia de procedência e ANVISA?</span>
+            <span class="faq-toggle text-2xl font-light text-white/40 transition-transform duration-300 shrink-0">+</span>
+          </button>
+          <div class="faq-content text-white/55 text-[15px] leading-relaxed pb-6 pr-10">
+            100% de garantia. Somos distribuidora autorizada e atuamos apenas com marcas originais de fábrica (Rennova, Dysport, Botox, Xeomin, etc.). Cada saída é acompanhada de Nota Fiscal Eletrônica com especificação exata do lote, validade e controle térmico para itens sensíveis.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-hof-ink border-t border-white/10 pt-20 pb-12 px-5 sm:px-8">
+    <div class="max-w-3xl mx-auto text-center space-y-8">
+
+      <div class="flex flex-col items-center space-y-5">
+        <img src="assets/img/logo-verde-original.png" alt="HOF Style" class="h-20 w-auto object-contain" />
+        <a href="https://www.instagram.com/_hofstyle/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/15 text-[11px] font-semibold uppercase tracking-[0.14em] text-hof-emerald hover:border-hof-emerald/50 hover:bg-hof-emerald/10 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@_hofstyle no Instagram</span>
+        </a>
+      </div>
+
+      <nav class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-[13px] text-white/50">
+        <a href="#" class="hover:text-hof-emerald transition-colors">Início</a>
+        <a href="#quem-somos" class="hover:text-hof-emerald transition-colors">Quem Somos</a>
+        <a href="#colecao" class="hover:text-hof-emerald transition-colors">Coleção</a>
+        <a href="#marcas" class="hover:text-hof-emerald transition-colors">Marcas</a>
+        <a href="#unidades" class="hover:text-hof-emerald transition-colors">Cidades / Unidades</a>
+        <a href="#faq" class="hover:text-hof-emerald transition-colors">Perguntas Frequentes</a>
+      </nav>
+
+      <div class="text-xs text-white/35 space-y-1.5 leading-relaxed max-w-xl mx-auto">
+        <p class="font-semibold text-white/50">Venda exclusiva para profissionais habilitados (Lei Federal nº 6.360/1976)</p>
+        <p>Distribuidora autorizada com registro e conformidade sanitária ANVISA.</p>
+      </div>
+
+      <div class="border-t border-white/10 pt-6 text-xs text-white/30">
+        <p>© 2026 HOF Style Distribuidora. Todos os direitos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== WHATSAPP FLUTUANTE ==================== -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <a href="#unidades" class="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm py-3.5 px-5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- ==================== LIGHTBOX ==================== -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada">
+    <button id="lb-close" aria-label="Fechar" class="absolute top-5 right-6 text-white/60 hover:text-white text-4xl font-light leading-none">&times;</button>
+    <figure class="text-center m-0">
+      <img id="lb-img" src="" alt="" />
+      <figcaption id="lb-cap" class="text-white/60 text-xs tracking-wide mt-4"></figcaption>
+    </figure>
+  </div>
+
+  <script>
+    // Nav ganha fundo sólido ao rolar
+    (function () {
+      const nav = document.getElementById('nav');
+      const cls = ['bg-hof-black/90', 'backdrop-blur-md', 'border-b', 'border-white/10'];
+      const onScroll = () => {
+        if (window.scrollY > 60) nav.classList.add(...cls);
+        else nav.classList.remove(...cls);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // Reveal ao rolar
+    (function () {
+      const items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      items.forEach(el => io.observe(el));
+    })();
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(other => other.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    // Lightbox da galeria
+    (function () {
+      const box = document.getElementById('lightbox');
+      const img = document.getElementById('lb-img');
+      const cap = document.getElementById('lb-cap');
+      const close = () => { box.classList.remove('open'); document.body.style.overflow = ''; };
+
+      document.querySelectorAll('.lb').forEach(btn => {
+        btn.addEventListener('click', () => {
+          img.src = btn.dataset.src;
+          img.alt = btn.dataset.caption || '';
+          cap.textContent = btn.dataset.caption || '';
+          box.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      document.getElementById('lb-close').addEventListener('click', close);
+      box.addEventListener('click', (e) => { if (e.target === box) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    })();
+  </script>
+
+</body>
+</html>

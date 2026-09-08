@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOF STYLE - A Distribuidora Nº 1 do Nordeste em Harmonização Facial e Corporal</title>
+  <meta name="description" content="HOF STYLE - Distribuidora autorizada especializada em produtos para Harmonização Facial e Corporal com envio imediato e procedência garantida. 11 unidades no Brasil." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HOF STYLE - A Distribuidora Nº 1 do Nordeste em HOF" />
+  <meta property="og:description" content="Tudo que sua clínica precisa em Harmonização Facial e Corporal em um só lugar. Distribuidora autorizada com 11 unidades no Brasil." />
+  <meta property="og:image" content="assets/img/logo-principal.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/icon-verde.png" />
+
+  <!-- Google Font: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'hof-emerald': '#45aa8c',
+            'hof-forest': '#025450',
+            'hof-forest-dark': '#013e3b',
+            'hof-surface': '#F8FAFC',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Accordion FAQ */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+    .faq-item.active .faq-content {
+      max-height: 250px;
+      opacity: 1;
+    }
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+      color: #025450;
+    }
+
+    /* Marquee de Marcas */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Suavização de scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FAFBFB] text-slate-800 antialiased selection:bg-[#45aa8c]/20 selection:text-[#025450]">
+
+  <!-- ==================== HEADER / NAVBAR FIXA ==================== -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo Oficial -->
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/img/logo-verde-original.png" alt="HOF Style" class="h-11 sm:h-12 w-auto object-contain" />
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#diferenciais" class="hover:text-[#025450] transition-colors">Diferenciais</a>
+        <a href="#quem-somos" class="hover:text-[#025450] transition-colors">Quem Somos</a>
+        <a href="#produtos" class="hover:text-[#025450] transition-colors">Produtos</a>
+        <a href="#marcas" class="hover:text-[#025450] transition-colors">Marcas</a>
+        <a href="#unidades" class="hover:text-[#025450] transition-colors">Unidades</a>
+        <a href="#faq" class="hover:text-[#025450] transition-colors">Dúvidas</a>
+      </nav>
+
+      <!-- CTA WhatsApp Topo -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.instagram.com/_hofstyle/" target="_blank" rel="noreferrer" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-[#025450] px-3 py-1.5 rounded-full border border-slate-200 bg-slate-50 hover:bg-emerald-50/50 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@_hofstyle</span>
+        </a>
+        <a href="#unidades" class="inline-flex items-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all">
+          <span>Catálogo & Preços</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION (TEMA CLARO LUXO) ==================== -->
+  <section class="relative lg:min-h-[calc(100vh-5rem)] flex flex-col justify-center bg-gradient-to-b from-emerald-50/60 via-[#FAFBFB] to-white overflow-hidden">
+
+    <!-- Elementos Decorativos de Fundo (Luz Suave) -->
+    <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-[#45aa8c]/15 via-emerald-100/30 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute bottom-0 left-10 w-96 h-96 bg-emerald-50/80 rounded-full blur-2xl pointer-events-none -z-10"></div>
+
+    <!-- Foto sangrada: metade direita no desktop, faixa no topo no mobile -->
+    <div class="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-[46%] xl:w-[48%]">
+      <img src="assets/img/model-kirialys-2.png" alt="Profissional apresentando Kirialys HACa"
+           class="w-full h-[380px] sm:h-[460px] lg:h-full object-cover object-[center_18%]" />
+      <!-- Degradê que funde a foto com o fundo claro -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#FAFBFB] via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#FAFBFB] lg:via-transparent lg:to-transparent pointer-events-none"></div>
+      <div class="hidden lg:block absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#FAFBFB] to-transparent pointer-events-none"></div>
+    </div>
+
+    <!-- Coluna de Texto -->
+    <div class="relative z-10 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-10 pb-16 lg:pt-12 lg:pb-20">
+      <div class="lg:max-w-[52%] flex flex-col items-center lg:items-start text-center lg:text-left">
+
+        <!-- Badge de Envio Imediato -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-emerald-200/80 shadow-sm text-xs font-bold text-[#025450] uppercase tracking-wider mb-8">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c] animate-pulse"></span>
+          <span>Distribuidora Autorizada • Envio Imediato</span>
+        </div>
+
+        <!-- Logo de Destaque no Hero -->
+        <div class="mb-8">
+          <img src="assets/img/logo-verde-original.png" alt="HOF Style" class="w-48 sm:w-56 md:w-60 mx-auto lg:mx-0 object-contain drop-shadow-sm" />
+        </div>
+
+        <!-- Título Principal H1 -->
+        <h1 class="text-[26px] sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold uppercase tracking-[0.02em] [word-spacing:0.14em] text-slate-900 leading-[1.25] sm:leading-[1.28] md:leading-[1.25] text-balance mb-6">
+          Tudo que sua clínica precisa
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#025450] via-[#45aa8c] to-[#025450]">em um só lugar</span>
+        </h1>
+
+        <!-- Subtítulo Aprovado -->
+        <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed mb-10">
+          Com entrega rápida e procedência garantida. 6 anos de mercado construídos com produtos de qualidade e parceria de verdade com nossos clientes.
+        </p>
+
+        <!-- Botões de Ação -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-md lg:max-w-none">
+          <a href="#unidades" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#025450] hover:bg-[#036b66] text-white font-bold text-sm sm:text-base py-4 px-8 rounded-xl shadow-lg shadow-emerald-950/15 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>SOLICITE O CATÁLOGO</span>
+          </a>
+          <a href="#unidades" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm sm:text-base py-4 px-8 rounded-xl border border-slate-300/80 hover:border-[#025450] shadow-sm hover:shadow transition-all">
+            <svg class="w-5 h-5 text-[#025450]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>VER 11 UNIDADES</span>
+          </a>
+        </div>
+
+        <!-- Selo de Garantia Rápido -->
+        <div class="mt-12 w-full flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-3 text-xs text-slate-500 font-medium border-t border-slate-200/80 pt-6">
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#45aa8c]" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Distribuição Autorizada
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#45aa8c]" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Nota Fiscal em Todos os Envios
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#45aa8c]" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Conformidade ANVISA
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4 DIFERENCIAIS (CARDS LUXO NO TEMA CLARO) ==================== -->
+  <section id="diferenciais" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-200/80">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase font-bold text-[#025450] tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+          Vantagens Exclusivas
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">
+          Por que profissionais escolhem a <span class="text-[#025450]">HOF Style</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Grupo VIP -->
+        <div class="bg-[#FAFBFB] hover:bg-white border border-slate-200/90 hover:border-[#45aa8c]/60 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100/70 text-[#025450] flex items-center justify-center mb-5 group-hover:bg-[#025450] group-hover:text-white transition-all shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Grupo VIP</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Acesso a promoções exclusivas, lançamentos em primeira mão e condições especiais só para quem faz parte do grupo.
+          </p>
+        </div>
+
+        <!-- Card 2: Frete Grátis -->
+        <div class="bg-[#FAFBFB] hover:bg-white border border-slate-200/90 hover:border-[#45aa8c]/60 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100/70 text-[#025450] flex items-center justify-center mb-5 group-hover:bg-[#025450] group-hover:text-white transition-all shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Frete Grátis</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Para regiões selecionadas. Confira com nossa equipe de vendas se sua região está contemplada com entrega expressa.
+          </p>
+        </div>
+
+        <!-- Card 3: Melhores Produtos do Mercado -->
+        <div class="bg-[#FAFBFB] hover:bg-white border border-slate-200/90 hover:border-[#45aa8c]/60 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100/70 text-[#025450] flex items-center justify-center mb-5 group-hover:bg-[#025450] group-hover:text-white transition-all shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Melhores Produtos</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Marcas premium e produtos de alta performance, rigorosamente selecionados para garantir o melhor resultado clínico.
+          </p>
+        </div>
+
+        <!-- Card 4: Parcelamento em até 10x -->
+        <div class="bg-[#FAFBFB] hover:bg-white border border-slate-200/90 hover:border-[#45aa8c]/60 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100/70 text-[#025450] flex items-center justify-center mb-5 group-hover:bg-[#025450] group-hover:text-white transition-all shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Até 10x Sem Pesar</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Flexibilidade financeira para sua clínica abastecer o estoque sem comprometer o fluxo de caixa. Parcele em até 10 vezes.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== QUEM SOMOS ==================== -->
+  <section id="quem-somos" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50/70">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Coluna de Texto Institucional -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 text-[#025450] text-xs font-bold uppercase tracking-wider">
+            <span>A Distribuidora Nº 1 do Nordeste</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+            6 anos construindo autoridade, qualidade e <span class="text-[#025450]">parceria real com nossos clientes.</span>
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+            A <strong class="text-slate-900 font-semibold">HOF STYLE</strong> nasceu com um propósito claro: abastecer profissionais da estética e odontologia com agilidade inegociável, rigor térmico absoluto e marcas consagradas pelo mercado global.
+          </p>
+
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Com presença consolidada em <strong class="text-slate-900">11 unidades estratégicas</strong> espalhadas por Paraíba, Rio Grande do Norte, Maranhão e Piauí, levamos até a sua clínica o suporte comercial que você precisa para atender seus pacientes com total segurança.
+          </p>
+
+          <!-- Selos de Confiança -->
+          <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-slate-200">
+            <div>
+              <div class="text-3xl font-extrabold text-[#025450]">6+</div>
+              <div class="text-xs text-slate-500 font-medium">Anos de Mercado</div>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-[#025450]">11</div>
+              <div class="text-xs text-slate-500 font-medium">Unidades no Brasil</div>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-[#025450]">100%</div>
+              <div class="text-xs text-slate-500 font-medium">Garantia ANVISA</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna de Imagem / Card Visual -->
+        <div class="lg:col-span-5">
+          <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 w-48 h-48 bg-emerald-50 rounded-full blur-2xl"></div>
+            <div class="relative z-10 space-y-6">
+              <div class="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center text-[#025450]">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">Compromisso Ético & Técnico</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Cada pedido faturado em nossa distribuidora segue as diretrizes sanitárias mais rígidas, garantindo cadeia de custódia e integridade molecular até a sua sala de atendimento.
+              </p>
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 text-xs text-slate-700">
+                <span class="font-bold text-[#025450] block mb-1">Venda Exclusiva:</span>
+                Disponível exclusivamente para médicos, dentistas, biomédicos, farmacêuticos estetas e enfermeiros habilitados.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VITRINE DE PRODUTOS MAIS PEDIDOS (TEMA CLARO) ==================== -->
+  <section id="produtos" class="py-24 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-200/80">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Cabeçalho da Seção -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-[#025450] text-xs font-bold uppercase tracking-wider mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Vitrine em Destaque</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+          Os Produtos Mais Pedidos pelas Clínicas
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+          Qualidade inegociável, rigor térmico absoluto e pronta-entrega imediata para os protocolos mais requisitados em harmonização facial e corporal.
+        </p>
+      </div>
+
+      <!-- Grid de 4 Cards de Produtos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Produto 1: Rennova Elleva X -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Mais Pedido
+            </span>
+            <img src="assets/img/elleva-x-caixa.png" alt="Rennova Elleva X" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Bioestimulador</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Rennova Elleva X</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">PLLA 630mg • Pó Injetável</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Potência máxima em neocolagênese facial e corporal com rápida reconstituição e padrão ouro Rennova.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Rennova%20Elleva%20X%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 2: Biogelis Volume -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Alta Performance
+            </span>
+            <img src="assets/img/biogelis-volume.png" alt="Biogelis Volume" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Preenchedor Dérmico</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Biogelis Volume</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">Ácido Hialurônico • 2 × 1ml c/ Lido</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Alta viscoelasticidade para volumização malar, mandíbula e mento com conforto anestésico ao paciente.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Biogelis%20Volume%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 3: Kirialys HACa -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Linha Premium
+            </span>
+            <img src="assets/img/kirialys-caixa.png" alt="Kirialys HACa" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Bioestimulador & Preenchimento</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Kirialys HACa</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">Hidroxiapatita de Cálcio • 1,25ml</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Dupla ação com efeito lifting estrutural imediato e estímulo biológico contínuo de colágeno autólogo.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Kirialys%20HACa%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 4: Evofill Contour -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Volume & Contorno
+            </span>
+            <img src="assets/img/evofill-boxes.png" alt="Evofill Contour" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Preenchedor Corporal & Facial</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Evofill Contour S & H</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">Ácido Hialurônico • 10ml</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Desenvolvido para projeção mandibular e procedimentos corporais com retenção e biocompatibilidade estrita.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Evofill%20Contour%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner de Apoio no Catálogo -->
+      <div class="mt-12 bg-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+        <div>
+          <h4 class="text-lg font-bold text-slate-900 mb-1">Precisa de outra marca, toxina ou dosagem específica?</h4>
+          <p class="text-sm text-slate-600">Trabalhamos também com Botox®, Dysport®, Xeomin®, Rennova Lift, fios de sustentação e cânulas hospitalares.</p>
+        </div>
+        <a href="#unidades" class="whitespace-nowrap inline-flex items-center gap-2 bg-white border border-[#025450] text-[#025450] hover:bg-[#025450] hover:text-white font-bold text-xs sm:text-sm py-3 px-6 rounded-xl transition-all shadow-sm">
+          <span>Ver Tabela Completa</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MARCAS E PRODUTOS (CARROSSEL MARQUEE) ==================== -->
+  <section id="marcas" class="py-16 bg-white border-y border-slate-200/80 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 text-center mb-8">
+      <span class="text-xs uppercase font-bold text-[#025450] tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+        Portfólio Oficial
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+        Marcas Consagradas em Harmonização Facial e Corporal
+      </h2>
+    </div>
+
+    <!-- Marquee de Logos / Nomes de Marcas -->
+    <div class="flex overflow-hidden relative">
+      <div class="animate-marquee gap-8 items-center py-4">
+        
+        <!-- Marcas Oficiais Hof Style -->
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Rennova</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Dysport</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Botox (Allergan)</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Elleva X</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Xeomin (Merz)</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Nabota</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Evofill</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Biogelis</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Kirialys</span>
+        </div>
+
+        <!-- Duplicata para loop contínuo -->
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Rennova</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Dysport</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Botox (Allergan)</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Elleva X</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Xeomin (Merz)</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Linhas de Categorias em Destaque -->
+    <div class="mt-8 flex flex-wrap justify-center gap-3 max-w-4xl mx-auto px-4 text-xs font-semibold text-slate-600">
+      <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Toxinas Botulínicas</span>
+      <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Preenchedores de Ácido Hialurônico</span>
+      <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Bioestimuladores de Colágeno</span>
+      <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Fios de PDO</span>
+      <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Cânulas & Insumos</span>
+      <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Anestésicos</span>
+    </div>
+  </section>
+
+  <!-- ==================== 8 UNIDADES (GRID CLARO & ELEGANTE) ==================== -->
+  <section id="unidades" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#FAFBFB]">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase font-bold text-[#025450] tracking-widest bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200/60">
+          Cobertura Regional
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4 mb-3">
+          Nossas <span class="text-[#025450]">11 Unidades</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Selecione a unidade mais próxima para atendimento imediato e cotação direta no WhatsApp com nossa equipe local.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6">
+        
+        <!-- 1. NATAL (RN) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">RN</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Natal</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento & Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(84) 99165-0603</div>
+          </div>
+          <a href="http://wa.me/5584991650603" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 2. JOÃO PESSOA (PB) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">PB</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">João Pessoa</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento & Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(83) 98194-8914</div>
+          </div>
+          <a href="http://wa.me/5583981948914" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 3. CAMPINA GRANDE (PB) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">PB</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Campina Grande</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento & Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(83) 99810-2051</div>
+          </div>
+          <a href="http://wa.me/5583998102051" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 4. PATOS (PB) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">PB</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Patos</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento & Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(83) 99807-0773</div>
+          </div>
+          <a href="http://wa.me/5583998070773" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 5. CAJAZEIRAS (PB) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">PB</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Cajazeiras</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento & Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(83) 99119-0648</div>
+          </div>
+          <a href="http://wa.me/5583991190648" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 6. SOUSA (PB) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">PB</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Sousa</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento & Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(83) 99119-0648</div>
+          </div>
+          <a href="http://wa.me/5583991190648" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 7. IMPERATRIZ (MA) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">MA</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Imperatriz</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento & Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(99) 98412-4975</div>
+          </div>
+          <a href="http://wa.me/5599984124975" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 8. CAICÓ (RN) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">RN</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Caicó</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento &amp; Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(83) 98194-8914</div>
+          </div>
+          <a href="http://wa.me/5583981948914" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 9. TERESINA (PI) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">PI</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Teresina</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento &amp; Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(83) 98194-8914</div>
+          </div>
+          <a href="http://wa.me/5583981948914" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 10. SÃO BENTO (PB) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">PB</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">São Bento</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento &amp; Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(83) 98194-8914</div>
+          </div>
+          <a href="http://wa.me/5583981948914" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 11. ITAPORANGA (PB) -->
+        <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#025450]/60 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#025450] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">PB</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Itaporanga</h3>
+            <p class="text-xs text-slate-500 mb-4">Atendimento &amp; Envio Expresso</p>
+            <div class="text-xs font-semibold text-slate-700 mb-4">(83) 98194-8914</div>
+          </div>
+          <a href="http://wa.me/5583981948914" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-emerald-50 group-hover:bg-[#025450] text-[#025450] group-hover:text-white font-bold text-xs transition-all shadow-sm">
+            <span>Falar no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION (TEMA CLARO) ==================== -->
+  <section id="faq" class="py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200/80">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase font-bold text-[#025450] tracking-widest bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200/60">
+          Tire suas Dúvidas
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4 mb-3">
+          Perguntas <span class="text-[#025450]">Frequentes</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Tudo o que você precisa saber sobre prazos, compras e políticas da HOF Style.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-slate-50/70 border border-slate-200/80 rounded-2xl p-6 transition-all">
+          <button class="faq-btn w-full text-left flex items-center justify-between gap-4 text-slate-900 font-bold text-base sm:text-lg hover:text-[#025450] transition-colors focus:outline-none">
+            <span>Como funciona a entrega e quais são os prazos?</span>
+            <span class="faq-toggle text-2xl font-light text-slate-400 transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content text-slate-600 text-sm sm:text-base leading-relaxed pt-3">
+            Para clientes nas regiões metropolitanas atendidas pelas nossas 11 unidades físicas, contamos com modalidade expressa de envio imediato via motoboy parceiro. Para demais cidades e estados, despachamos via transportadoras com cadeia térmica e rastreio em tempo real.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-slate-50/70 border border-slate-200/80 rounded-2xl p-6 transition-all">
+          <button class="faq-btn w-full text-left flex items-center justify-between gap-4 text-slate-900 font-bold text-base sm:text-lg hover:text-[#025450] transition-colors focus:outline-none">
+            <span>Quem pode comprar na HOF Style?</span>
+            <span class="faq-toggle text-2xl font-light text-slate-400 transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content text-slate-600 text-sm sm:text-base leading-relaxed pt-3">
+            Em total conformidade com a legislação sanitária brasileira (Lei Federal nº 6.360/1976), comercializamos nossos produtos estritamente para profissionais de saúde devidamente habilitados (Médicos, Cirurgiões-Dentistas, Biomédicos, Farmacêuticos Estetas e Enfermeiros Especialistas). Solicitamos o número de registro no respectivo conselho no ato do cadastro.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-slate-50/70 border border-slate-200/80 rounded-2xl p-6 transition-all">
+          <button class="faq-btn w-full text-left flex items-center justify-between gap-4 text-slate-900 font-bold text-base sm:text-lg hover:text-[#025450] transition-colors focus:outline-none">
+            <span>Como faço para entrar no Grupo VIP de ofertas?</span>
+            <span class="faq-toggle text-2xl font-light text-slate-400 transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content text-slate-600 text-sm sm:text-base leading-relaxed pt-3">
+            Nosso Grupo VIP é exclusivo para profissionais cadastrados. Ao entrar em contato com uma de nossas unidades pelo WhatsApp, basta solicitar ao consultor o link de convite. Lá você recebe tabelas especiais, lotes promocionais antecipados e combos com condições únicas.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-slate-50/70 border border-slate-200/80 rounded-2xl p-6 transition-all">
+          <button class="faq-btn w-full text-left flex items-center justify-between gap-4 text-slate-900 font-bold text-base sm:text-lg hover:text-[#025450] transition-colors focus:outline-none">
+            <span>Quais são as condições de parcelamento?</span>
+            <span class="faq-toggle text-2xl font-light text-slate-400 transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content text-slate-600 text-sm sm:text-base leading-relaxed pt-3">
+            Facilitamos as compras da sua clínica com parcelamento em até 10 vezes no cartão de crédito ou faturamento mediante análise cadastral. Fale com nossa equipe comercial da sua cidade para simular as melhores taxas para o volume do seu pedido.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-slate-50/70 border border-slate-200/80 rounded-2xl p-6 transition-all">
+          <button class="faq-btn w-full text-left flex items-center justify-between gap-4 text-slate-900 font-bold text-base sm:text-lg hover:text-[#025450] transition-colors focus:outline-none">
+            <span>Como funciona a política de frete grátis?</span>
+            <span class="faq-toggle text-2xl font-light text-slate-400 transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content text-slate-600 text-sm sm:text-base leading-relaxed pt-3">
+            Oferecemos frete grátis para diversas regiões nas compras acima do valor mínimo estipulado por unidade. Consulte nossa equipe pelo WhatsApp da unidade mais próxima informando seu CEP para conferir as condições ativas na sua localidade.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item bg-slate-50/70 border border-slate-200/80 rounded-2xl p-6 transition-all">
+          <button class="faq-btn w-full text-left flex items-center justify-between gap-4 text-slate-900 font-bold text-base sm:text-lg hover:text-[#025450] transition-colors focus:outline-none">
+            <span>Os produtos possuem garantia de procedência e ANVISA?</span>
+            <span class="faq-toggle text-2xl font-light text-slate-400 transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content text-slate-600 text-sm sm:text-base leading-relaxed pt-3">
+            100% de procedência garantida. Somos distribuidora autorizada e atuamos apenas com marcas originais de fábrica (Rennova, Dysport, Botox, Xeomin, etc.). Cada saída é acompanhada de Nota Fiscal Eletrônica com especificação exata do lote, validade e controle térmico para itens sensíveis.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER CENTRALIZADO MINIMALISTA (TEMA CLARO LUXO) ==================== -->
+  <footer class="bg-slate-100 border-t border-slate-200/80 pt-16 pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center space-y-8">
+      
+      <!-- Logo & Instagram Centralizados -->
+      <div class="flex flex-col items-center justify-center space-y-4">
+        <img src="assets/img/logo-verde-original.png" alt="HOF Style" class="h-20 w-auto object-contain" />
+        <a href="https://www.instagram.com/_hofstyle/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-300/80 text-xs font-semibold text-[#025450] hover:bg-emerald-50 hover:border-[#45aa8c]/50 transition-all shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@_hofstyle no Instagram</span>
+        </a>
+      </div>
+
+      <!-- Links de Navegação Centralizados -->
+      <nav class="flex flex-wrap justify-center gap-6 text-sm text-slate-600 font-medium">
+        <a href="#" class="hover:text-[#025450] transition-colors">Início</a>
+        <a href="#diferenciais" class="hover:text-[#025450] transition-colors">Diferenciais</a>
+        <a href="#quem-somos" class="hover:text-[#025450] transition-colors">Quem Somos</a>
+        <a href="#marcas" class="hover:text-[#025450] transition-colors">Marcas</a>
+        <a href="#unidades" class="hover:text-[#025450] transition-colors">Cidades / Unidades</a>
+        <a href="#faq" class="hover:text-[#025450] transition-colors">Perguntas Frequentes</a>
+      </nav>
+
+      <!-- Compliance & Regulamentação Centralizado -->
+      <div class="text-xs text-slate-500 space-y-1.5 leading-relaxed max-w-xl mx-auto">
+        <p class="font-semibold text-slate-700">Venda exclusiva para profissionais habilitados (Lei Federal nº 6.360/1976)</p>
+        <p>Distribuidora autorizada com rigoroso registro e conformidade sanitária ANVISA.</p>
+      </div>
+
+      <!-- Barra Inferior de Copyright -->
+      <div class="border-t border-slate-200/80 pt-6 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <p>© 2026 HOF Style Distribuidora. Todos os direitos reservados.</p>
+        <p class="text-slate-400">Desenvolvido com excelência técnica</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="#unidades" class="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm py-3.5 px-5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.classList.remove('active');
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
