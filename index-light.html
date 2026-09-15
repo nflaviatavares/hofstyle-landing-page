@@ -64,7 +64,7 @@
     .animate-marquee {
       display: flex;
       width: max-content;
-      animation: marquee 28s linear infinite;
+      animation: marquee 50s linear infinite;
     }
     .animate-marquee:hover {
       animation-play-state: paused;
@@ -126,7 +126,7 @@
 
     <!-- Foto sangrada: metade direita no desktop, faixa no topo no mobile -->
     <div class="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-[46%] xl:w-[48%]">
-      <img src="assets/img/model-kirialys-2.png" alt="Profissional apresentando Kirialys HACa"
+      <img src="assets/img/model-biogelis.png" alt="Profissional apresentando Biogelis Volume"
            class="w-full h-[380px] sm:h-[460px] lg:h-full object-cover object-[center_18%]" />
       <!-- Degradê que funde a foto com o fundo claro -->
       <div class="absolute inset-0 bg-gradient-to-t from-[#FAFBFB] via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#FAFBFB] lg:via-transparent lg:to-transparent pointer-events-none"></div>
@@ -358,20 +358,90 @@
         </p>
       </div>
 
-      <!-- Grid de 4 Cards de Produtos -->
+
+      <!-- Faixa de Vídeos (carrossel no mobile, 3 colunas no desktop) -->
+      <div class="max-w-4xl mx-auto mb-16">
+        <div class="flex md:grid md:grid-cols-3 gap-4 md:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0 pb-2 [scrollbar-width:none]">
+
+          <!-- Vídeo 1: Rennova Lift Shape Plus Lido Club -->
+          <div class="shrink-0 w-[70%] sm:w-[44%] md:w-auto snap-center bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+            <div class="relative aspect-[9/16] bg-slate-100">
+              <video class="hof-video absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="metadata" poster="assets/video/rennova-club-poster.jpg">
+                <source src="assets/video/rennova-club.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <span class="text-[11px] font-bold text-[#025450] uppercase tracking-wider block mb-0.5">Rennova</span>
+                <h3 class="text-sm font-bold text-slate-900 leading-snug">Lift Shape Plus Lido Club</h3>
+              </div>
+              <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Rennova%20Lift%20Shape%20Plus%20Lido%20Club%20na%20HOF%20Style." target="_blank" rel="noreferrer" aria-label="Cotar Lift Shape Plus Lido Club no WhatsApp" class="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#025450] hover:bg-[#036b66] text-white transition-all shadow-sm">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+              </a>
+            </div>
+          </div>
+
+
+          <!-- Vídeo 2: Letybo -->
+          <div class="shrink-0 w-[70%] sm:w-[44%] md:w-auto snap-center bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+            <div class="relative aspect-[9/16] bg-slate-100">
+              <video class="hof-video absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="metadata" poster="assets/video/letybo-poster.jpg">
+                <source src="assets/video/letybo.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <span class="text-[11px] font-bold text-[#025450] uppercase tracking-wider block mb-0.5">Dermadream • Toxina</span>
+                <h3 class="text-sm font-bold text-slate-900 leading-snug">Letybo</h3>
+              </div>
+              <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Letybo%20na%20HOF%20Style." target="_blank" rel="noreferrer" aria-label="Cotar Letybo no WhatsApp" class="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#025450] hover:bg-[#036b66] text-white transition-all shadow-sm">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+              </a>
+            </div>
+          </div>
+
+
+          <!-- Vídeo 3: Sculptra -->
+          <div class="shrink-0 w-[70%] sm:w-[44%] md:w-auto snap-center bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+            <div class="relative aspect-[9/16] bg-slate-100">
+              <video class="hof-video absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="metadata" poster="assets/video/sculptra-poster.jpg">
+                <source src="assets/video/sculptra.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <span class="text-[11px] font-bold text-[#025450] uppercase tracking-wider block mb-0.5">Galderma • Bioestimulador</span>
+                <h3 class="text-sm font-bold text-slate-900 leading-snug">Sculptra</h3>
+              </div>
+              <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Sculptra%20na%20HOF%20Style." target="_blank" rel="noreferrer" aria-label="Cotar Sculptra no WhatsApp" class="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#025450] hover:bg-[#036b66] text-white transition-all shadow-sm">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Grid de 8 Cards de Produtos -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <!-- Produto 1: Rennova Elleva X -->
         <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
           <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
             <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
-              Mais Pedido
+              Linha Rennova
             </span>
-            <img src="assets/img/elleva-x-caixa.png" alt="Rennova Elleva X" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+            <img src="assets/img/elleva-x-caixa.png" alt="Rennova Elleva X" loading="lazy" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5 flex flex-col flex-grow justify-between">
             <div>
-              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Bioestimulador</span>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Rennova • Bioestimulador</span>
               <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Rennova Elleva X</h3>
               <p class="text-xs text-slate-500 font-semibold mb-3">PLLA 630mg • Pó Injetável</p>
               <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
@@ -387,76 +457,180 @@
           </div>
         </div>
 
-        <!-- Produto 2: Biogelis Volume -->
+        <!-- Produto 2: Rennova Lift -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Linha Rennova
+            </span>
+            <img src="assets/img/rennova-lift.png" alt="Rennova Lift" loading="lazy" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Rennova • Preenchedor</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Rennova Lift</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">Ácido Hialurônico • Linha Lift</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Linha de ácido hialurônico Rennova para preenchimento e contorno facial, com opções para cada plano de aplicação.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Rennova%20Lift%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 3: Neuramis Volume (Dermadream) -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Mais Vendido
+            </span>
+            <img src="assets/img/neuramis-volume.jpg" alt="Neuramis Volume Lidocaine" loading="lazy" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Dermadream • Preenchedor</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Neuramis Volume</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">Ácido Hialurônico 20mg/ml • 1ml c/ Lido</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Volumização profunda e definição de contornos, com lidocaína para mais conforto ao paciente.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Neuramis%20Volume%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 4: Yvoire Contour (Dermadream) -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Mais Procurado
+            </span>
+            <img src="assets/img/yvoire-contour.jpg" alt="Yvoire Contour" loading="lazy" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Dermadream • Preenchedor</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Yvoire Contour</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">Ácido Hialurônico Reticulado • 1,0ml</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Indicado para contorno e projeção facial, com a tecnologia de ácido hialurônico da LG Chem.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Yvoire%20Contour%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 5: Letybo (Dermadream) -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Destaque
+            </span>
+            <img src="assets/img/letybo.jpg" alt="Letybo toxina botulínica tipo A" loading="lazy" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Dermadream • Toxina Botulínica</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Letybo</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">Toxina Botulínica Tipo A • 100U e 200U</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Toxina botulínica tipo A em frascos de 100U e 200U para o tratamento de rugas de expressão.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Letybo%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 6: Xeomin (Merz) -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Carro-Chefe
+            </span>
+            <img src="assets/img/xeomin.jpg" alt="Xeomin toxina botulínica tipo A" loading="lazy" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Merz • Toxina Botulínica</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Xeomin</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">Toxina Botulínica Tipo A • 100U</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Livre de proteínas complexantes, referência mundial em toxina botulínica para rugas de expressão.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Xeomin%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 7: Belotero Intense (Merz) -->
+        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
+          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
+              Destaque
+            </span>
+            <img src="assets/img/belotero-intense.jpg" alt="Belotero Intense" loading="lazy" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Merz • Preenchedor</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Belotero Intense</h3>
+              <p class="text-xs text-slate-500 font-semibold mb-3">Ácido Hialurônico • 1ml c/ Lido</p>
+              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                Preenchimento de sulcos profundos e volume labial com integração natural ao tecido.
+              </p>
+            </div>
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Belotero%20Intense%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+              <span>Cotar no WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 8: Biogelis Volume & Global (Pharmaesthetics) -->
         <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
           <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
             <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
               Alta Performance
             </span>
-            <img src="assets/img/biogelis-volume.png" alt="Biogelis Volume" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+            <img src="assets/img/biogelis-volume-global.jpg" alt="Biogelis Volume e Biogelis Global" loading="lazy" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5 flex flex-col flex-grow justify-between">
             <div>
-              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Preenchedor Dérmico</span>
-              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Biogelis Volume</h3>
+              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Pharmaesthetics • Preenchedor</span>
+              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Biogelis Volume & Global</h3>
               <p class="text-xs text-slate-500 font-semibold mb-3">Ácido Hialurônico • 2 × 1ml c/ Lido</p>
               <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-                Alta viscoelasticidade para volumização malar, mandíbula e mento com conforto anestésico ao paciente.
+                Duas versões para volumização e correções faciais, ambas com lidocaína para conforto do paciente.
               </p>
             </div>
-            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Biogelis%20Volume%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
-              <span>Cotar no WhatsApp</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Produto 3: Kirialys HACa -->
-        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
-          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
-            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
-              Linha Premium
-            </span>
-            <img src="assets/img/kirialys-caixa.png" alt="Kirialys HACa" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 flex flex-col flex-grow justify-between">
-            <div>
-              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Bioestimulador & Preenchimento</span>
-              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Kirialys HACa</h3>
-              <p class="text-xs text-slate-500 font-semibold mb-3">Hidroxiapatita de Cálcio • 1,25ml</p>
-              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-                Dupla ação com efeito lifting estrutural imediato e estímulo biológico contínuo de colágeno autólogo.
-              </p>
-            </div>
-            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Kirialys%20HACa%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
-              <span>Cotar no WhatsApp</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Produto 4: Evofill Contour -->
-        <div class="group bg-[#FAFBFB] rounded-2xl border border-slate-200/90 hover:border-[#45aa8c]/60 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1">
-          <div class="relative h-64 sm:h-72 bg-gradient-to-b from-slate-100/60 to-slate-200/40 p-4 flex items-center justify-center overflow-hidden">
-            <span class="absolute top-3 left-3 bg-[#025450] text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm z-10">
-              Volume & Contorno
-            </span>
-            <img src="assets/img/evofill-boxes.png" alt="Evofill Contour" class="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 flex flex-col flex-grow justify-between">
-            <div>
-              <span class="text-xs font-bold text-[#025450] uppercase tracking-wider block mb-1">Preenchedor Corporal & Facial</span>
-              <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-[#025450] transition-colors">Evofill Contour S & H</h3>
-              <p class="text-xs text-slate-500 font-semibold mb-3">Ácido Hialurônico • 10ml</p>
-              <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-                Desenvolvido para projeção mandibular e procedimentos corporais com retenção e biocompatibilidade estrita.
-              </p>
-            </div>
-            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Evofill%20Contour%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
+            <a href="https://wa.me/5584991650603?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20do%20Biogelis%20Volume%20e%20Global%20na%20HOF%20Style." target="_blank" rel="noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#025450] hover:bg-[#036b66] text-white text-xs font-bold py-3 px-4 rounded-xl transition-all shadow-sm group-hover:shadow-md">
               <span>Cotar no WhatsApp</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -471,7 +645,7 @@
       <div class="mt-12 bg-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
         <div>
           <h4 class="text-lg font-bold text-slate-900 mb-1">Precisa de outra marca, toxina ou dosagem específica?</h4>
-          <p class="text-sm text-slate-600">Trabalhamos também com Botox®, Dysport®, Xeomin®, Rennova Lift, fios de sustentação e cânulas hospitalares.</p>
+          <p class="text-sm text-slate-600">Trabalhamos também com Botox®, Dysport®, Sculptra®, Evofill, fios de sustentação e cânulas hospitalares.</p>
         </div>
         <a href="#unidades" class="whitespace-nowrap inline-flex items-center gap-2 bg-white border border-[#025450] text-[#025450] hover:bg-[#025450] hover:text-white font-bold text-xs sm:text-sm py-3 px-6 rounded-xl transition-all shadow-sm">
           <span>Ver Tabela Completa</span>
@@ -498,7 +672,7 @@
     <!-- Marquee de Logos / Nomes de Marcas -->
     <div class="flex overflow-hidden relative">
       <div class="animate-marquee gap-8 items-center py-4">
-        
+
         <!-- Marcas Oficiais Hof Style -->
         <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
           <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
@@ -507,12 +681,37 @@
 
         <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
           <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
-          <span>Dysport</span>
+          <span>Neuramis</span>
         </div>
 
         <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
           <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
-          <span>Botox (Allergan)</span>
+          <span>Yvoire</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Letybo</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Xeomin (Merz)</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Belotero (Merz)</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Biogelis</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Sculptra</span>
         </div>
 
         <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
@@ -522,7 +721,12 @@
 
         <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
           <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
-          <span>Xeomin (Merz)</span>
+          <span>Botox (Allergan)</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Dysport</span>
         </div>
 
         <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
@@ -535,40 +739,70 @@
           <span>Evofill</span>
         </div>
 
-        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
-          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
-          <span>Biogelis</span>
-        </div>
-
-        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
-          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
-          <span>Kirialys</span>
-        </div>
-
         <!-- Duplicata para loop contínuo -->
-        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
           <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
           <span>Rennova</span>
         </div>
 
-        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
           <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
-          <span>Dysport</span>
+          <span>Neuramis</span>
         </div>
 
-        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
           <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
-          <span>Botox (Allergan)</span>
+          <span>Yvoire</span>
         </div>
 
-        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Letybo</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Xeomin (Merz)</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Belotero (Merz)</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Biogelis</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Sculptra</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
           <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
           <span>Elleva X</span>
         </div>
 
-        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors">
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
           <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
-          <span>Xeomin (Merz)</span>
+          <span>Botox (Allergan)</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Dysport</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Nabota</span>
+        </div>
+
+        <div class="px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold text-sm tracking-wider uppercase flex items-center gap-3 whitespace-nowrap shadow-sm hover:border-[#025450] hover:text-[#025450] transition-colors" aria-hidden="true">
+          <span class="w-2 h-2 rounded-full bg-[#45aa8c]"></span>
+          <span>Evofill</span>
         </div>
 
       </div>
@@ -960,6 +1194,26 @@
 
   <!-- Scripts -->
   <script>
+    // Vídeos da vitrine: tocam só quando visíveis (economiza dados no celular)
+    (() => {
+      const videos = document.querySelectorAll('.hof-video');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        videos.forEach(v => { v.controls = true; });
+        return;
+      }
+      if (!('IntersectionObserver' in window)) {
+        videos.forEach(v => v.play().catch(() => {}));
+        return;
+      }
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(({ target, isIntersecting }) => {
+          if (isIntersecting) target.play().catch(() => {});
+          else target.pause();
+        });
+      }, { threshold: 0.35 });
+      videos.forEach(v => io.observe(v));
+    })();
+
     // FAQ Accordion
     document.querySelectorAll('.faq-btn').forEach(btn => {
       btn.addEventListener('click', () => {

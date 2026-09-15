@@ -6,7 +6,7 @@ Landing page de alta conversão e alto padrão (Clinical Luxury) da **HOF STYLE*
 
 - **Design Clinical Luxury**: Paleta institucional verde esmeralda e floresta (#45aa8c e #025450), tipografia refinada (*Plus Jakarta Sans* e *Inter*).
 - **11 Unidades no Brasil**: Cobertura com atendimento e envio expresso nas unidades regionais.
-- **Catálogo de Produtos**: Apresentação de marcas de referência no mercado HOF (Kirialys, Biogelis, Elleva X, Evofill, Belotero, Restylane, Rennova, etc.).
+- **Catálogo de Produtos**: Apresentação de marcas de referência no mercado HOF (Rennova, Neuramis, Yvoire, Letybo, Xeomin, Belotero, Biogelis, Sculptra, etc.).
 - **Integração com WhatsApp**: Botões de conversão direta direcionados para as respectivas unidades e consultores.
 - **Responsivo & Otimizado**: Carregamento rápido, Tailwind CSS e layout fluido para mobile, tablet e desktop.
 
